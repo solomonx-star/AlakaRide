@@ -3,6 +3,7 @@
     "name": "alakaride",
     "slug": "alakaride",
     "version": "1.0.0",
+    "newArchEnabled": true,
 
     "scheme": "alakaride",
     "web": {
