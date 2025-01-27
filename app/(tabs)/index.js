@@ -1,6 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
+
+import Button from '../../components/Button';
 
 export default function Home() {
-  return <View />; 
+  return (
+    <View className="flex-1 items-center justify-center">
+      <Text>Hello</Text>
+      <Button title="Submit" type="secondary" />
+    </View>
+  );
 }
