@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { Redirect } from 'expo-router';
 
+import Avatar from '../../components/Avatar';
 import Button from '../../components/Button';
+import Map from '../../components/MapView';
 
 export default function Home() {
-  return (
-    <View className="flex-1 items-center justify-center">
-      <Text>Hello</Text>
-      <Button title="Submit" type="secondary" />
-    </View>
-  );
+  return <Redirect href="/(tabs)/Home" />;
 }

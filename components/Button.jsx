@@ -1,14 +1,20 @@
 import React from 'react';
-import { Text, Pressable } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 const Button = ({ onPress, title, type = 'primary' }) => {
-  const isSecondary = type === 'secondary';
   return (
-    <Pressable
+    <TouchableOpacity
       onPress={onPress}
-      className={`rounded px-4 py-3 ${isSecondary ? 'border border-blue-500 bg-white' : 'bg-blue-500'}`}>
-      <Text className={`font-bold ${isSecondary ? 'text-blue-500' : 'text-white'}`}>{title}</Text>
-    </Pressable>
+      className={`rounded px-4 py-3 ${
+        type === 'secondary' ? 'border border-green-500 bg-white' : 'bg-green-500'
+      }`}>
+      <Text
+        className={`text-center font-bold ${
+          type === 'secondary' ? 'text-green-500' : 'text-white'
+        }`}>
+        {title}
+      </Text>
+    </TouchableOpacity>
   );
 };
 
