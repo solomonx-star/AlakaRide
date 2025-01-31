@@ -7,9 +7,7 @@ import Map from '../../../components/MapView';
 export default function Home() {
   return (
     <View className="flex-1 items-center justify-center">
-      <Text> Hi </Text>
       <Map />
-      <Button title="Press" type="primary" />
     </View>
   );
 }
