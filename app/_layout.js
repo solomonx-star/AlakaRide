@@ -1,6 +1,7 @@
 import '../global.css';
 
-import { Stack, Slot } from 'expo-router';
+import { Slot } from 'expo-router';
+import { LocationProvider } from '../context/locationContex';
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
@@ -8,5 +9,9 @@ export const unstable_settings = {
 };
 
 export default function RootLayout() {
-  return <Slot />;
+  return (
+    <LocationProvider>
+      <Slot />
+    </LocationProvider>
+  );
 }
